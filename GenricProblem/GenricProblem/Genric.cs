@@ -8,7 +8,7 @@ namespace GenricProblem
 {
     internal class Genric
     {
-        public static float FindMaxFloatNumber(float first, float second, float third)
+        public static string FindMaxFloatNumber(string first, string second, string third)
         {
             if ((first.CompareTo(second) > 0) && (first.CompareTo(third) > 0))
             {
