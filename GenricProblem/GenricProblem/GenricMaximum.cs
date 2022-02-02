@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace GenricProblem
 {
-    internal class GenricMaximum<T> where T : IComparable
+    internal class GenericMaximum<T> where T : IComparable
     {
         public T[] values;
-        public GenricMaximum(T[] values)
+        public GenericMaximum(T[] values)
         {
             this.values = values;
         }
@@ -29,7 +29,7 @@ namespace GenricProblem
             var max = MaxValue(this.values);
             return max;
         }
-        public void PrintMaxValue()
+        public void PrintMaxValueOfArray()
         {
             var max = MaxValue(this.values);
             Console.WriteLine("Maximum value is: " + max);
