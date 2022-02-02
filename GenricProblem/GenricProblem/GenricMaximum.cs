@@ -6,34 +6,29 @@ using System.Threading.Tasks;
 
 namespace GenricProblem
 {
-    internal class GenericMaximum<T> where T : IComparable
+    public class GenricMaximum<T> where T : IComparable
     {
-        public T[] values;
-        public GenericMaximum(T[] values)
+        public void FindMax(T first, T second, T third)
         {
-            this.values = values;
-        }
-        public T[] Sort(T[] values)
-        {
-            Array.Sort(values);
-            return values;
-        }
-        public T MaxValue(T[] values)
-        {
-            var SortedValues = Sort(values);
-            return SortedValues[this.values.Length - 1];
+            if ((first.CompareTo(second) > 0) && (first.CompareTo(third) > 0))
+            {
+                Console.WriteLine(first + " is greates");
+            }
+            else if ((second.CompareTo(first) > 0) && (second.CompareTo(third) > 0))
+            {
+                Console.WriteLine(second + " is greatest");
+            }
+            else if ((third.CompareTo(second) > 0) && (third.CompareTo(first) > 0))
+            {
+                Console.WriteLine(third + " is greatest");
+            }
+            else
+            {
+                Console.WriteLine("All are equal");
 
+            }
         }
-        public T MaxMethod()
-        {
-            var max = MaxValue(this.values);
-            return max;
-        }
-        public void PrintMaxValueOfArray()
-        {
-            var max = MaxValue(this.values);
-            Console.WriteLine("Maximum value is: " + max);
-        }
-
     }
+
 }
+   
