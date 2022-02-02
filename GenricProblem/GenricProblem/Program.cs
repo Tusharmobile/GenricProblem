@@ -10,10 +10,12 @@ namespace GenricProblem
     {
         static void Main(string[] args)
         {
-            
 
-            GenricMaximum<int> first = new GenricMaximum<int>();
-            first.FindMax(1, 2, 3);
+
+           
+
+            Generic<int> first = new Generic<int>(1, 2, 3);
+
             Console.ReadLine();
         }
     }
