@@ -11,23 +11,22 @@ namespace GenricProblem
         static void Main(string[] args)
         {
             Console.WriteLine("Enter three words:");
-            string word1 = Console.ReadLine();
-            string word2 = Console.ReadLine();
-            string word3 = Console.ReadLine();
+            
+            int[] arr = { 1, 2, 3, 4, 5 };
+            GenricMaximum<int> obj = new GenricMaximum<int>(arr);
+            obj.PrintMaxValue();
+            string[] Stringarr = { "abc", "efg", "hij" };
 
-
-            string maxString =Genric. FindMaxFloatNumber(word1, word2, word3);
-
-            if (maxString == null)
-            {
-                Console.WriteLine("All three numbers are equal!!!");
-            }
-            else
-            {
-                Console.WriteLine("Maximum among three:" + maxString);
-            }
+            GenricMaximum<string> obj1 = new GenricMaximum<string>(Stringarr);
+            obj1.PrintMaxValue();
+            char[] Chararr = { 'a', 'b', 'c', };
+            GenricMaximum<char> obj2 = new GenricMaximum<char>(Chararr);
+            obj2.PrintMaxValue();
+            float[] Floatarr = { 1.1f, 1.2f, 1.3f };
+            GenricMaximum<float> obj3 = new GenricMaximum<float>(Floatarr);
+            obj3.PrintMaxValue();
+            Console.ReadLine();
         }
     }
 }
-
 
